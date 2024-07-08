@@ -11,21 +11,21 @@ import java.util.Date;
  * @author Asus
  */
 public class Order {
-    private Long orderId;
-    private Long userId;
+    private int orderId;
+    private int userId;
     private String fullname;
     private String phone;
     private String email;
     private String address;
     private String note;
     private Float total;
-    private Integer status;
-    private Date dateTime;
+    private String status;
+    private Date createAt;
 
     public Order() {
     }
 
-    public Order(Long orderId, Long userId, String fullname, String phone, String email, String address, String note, Float total, Integer status, Date dateTime) {
+    public Order(int orderId, int userId, String fullname, String phone, String email, String address, String note, Float total, String status, Date createAt) {
         this.orderId = orderId;
         this.userId = userId;
         this.fullname = fullname;
@@ -35,22 +35,22 @@ public class Order {
         this.note = note;
         this.total = total;
         this.status = status;
-        this.dateTime = dateTime;
+        this.createAt = createAt;
     }
 
-    public Long getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 
-    public Long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -102,25 +102,25 @@ public class Order {
         this.total = total;
     }
 
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
     public Date getDateTime() {
-        return dateTime;
+        return createAt;
     }
 
     public void setDateTime(Date dateTime) {
-        this.dateTime = dateTime;
+        this.createAt = dateTime;
     }
 
     @Override
     public String toString() {
-        return "Order{" + "orderId=" + orderId + ", userId=" + userId + ", fullname=" + fullname + ", phone=" + phone + ", email=" + email + ", address=" + address + ", note=" + note + ", total=" + total + ", status=" + status + ", dateTime=" + dateTime + '}';
+        return "Order{" + "orderId=" + orderId + ", userId=" + userId + ", fullname=" + fullname + ", phone=" + phone + ", email=" + email + ", address=" + address + ", note=" + note + ", total=" + total + ", status=" + status + ", dateTime=" + createAt + '}';
     }
     
     

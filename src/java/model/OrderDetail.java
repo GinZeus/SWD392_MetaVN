@@ -9,16 +9,16 @@ package model;
  * @author Asus
  */
 public class OrderDetail {
-    private Long orderDetailId;
-    private Long orderId;
-    private Long productId;
-    private Integer quantity;
+    private int orderDetailId;
+    private int orderId;
+    private int productId;
+    private int quantity;
     private Float total;
 
     public OrderDetail() {
     }
 
-    public OrderDetail(Long orderDetailId, Long orderId, Long productId, Integer quantity, Float total) {
+    public OrderDetail(int orderDetailId, int orderId, int productId, int quantity, Float total) {
         this.orderDetailId = orderDetailId;
         this.orderId = orderId;
         this.productId = productId;
@@ -26,35 +26,35 @@ public class OrderDetail {
         this.total = total;
     }
 
-    public Long getOrderDetailId() {
+    public int getOrderDetailId() {
         return orderDetailId;
     }
 
-    public void setOrderDetailId(Long orderDetailId) {
+    public void setOrderDetailId(int orderDetailId) {
         this.orderDetailId = orderDetailId;
     }
 
-    public Long getOrderId() {
+    public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(Long orderId) {
+    public void setOrderId(int orderId) {
         this.orderId = orderId;
     }
 
-    public Long getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
-    public Integer getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 

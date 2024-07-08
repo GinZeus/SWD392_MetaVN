@@ -9,30 +9,30 @@ package model;
  * @author Asus
  */
 public class ProdCate {
-    private Long productId;
-    private Long categoryId;
+    private int productId;
+    private int categoryId;
 
     public ProdCate() {
     }
 
-    public ProdCate(Long productId, Long categoryId) {
+    public ProdCate(int productId, int categoryId) {
         this.productId = productId;
         this.categoryId = categoryId;
     }
 
-    public Long getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
-    public Long getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(Long categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 

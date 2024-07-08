@@ -9,24 +9,26 @@ package model;
  * @author Asus
  */
 public class Category {
-    private Long categoryId;
+    private int categoryId;
     private String categoryName;
-    private Integer status;
-
-    public Category() {
+    private String des;
+    private String status;
+    
+    public Category() {      
     }
-
-    public Category(Long categoryId, String categoryName, Integer status) {
+    
+    public Category(int categoryId, String categoryName, String des, String status) {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
+        this.des = des;
         this.status = status;
     }
 
-    public Long getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(Long categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 
@@ -38,19 +40,19 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public Integer getStatus() {
+    public String getDes() {
+        return des;
+    }
+
+    public void setDes(String des) {
+        this.des = des;
+    }
+
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
-    }
-
-    @Override
-    public String toString() {
-        return "Category{" + "categoryId=" + categoryId + ", categoryName=" + categoryName + ", status=" + status + '}';
-    }
-    
-    
-    
+    }  
 }

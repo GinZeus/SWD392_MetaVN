@@ -11,21 +11,21 @@ import java.util.Date;
  * @author Asus
  */
 public class Product {
-    private Long productId;
+    private int productId;
     private String productName;
-    private Integer quantity;
+    private int quantity;
     private String thumbnail;
     private Float price;
     // description
     private String des;
     private String manufacturer;
-    private Integer status;
+    private String status;
     private Date createAt;
 
     public Product() {
     }
 
-    public Product(Long productId, String productName, Integer quantity, String thumbnail, Float price, String des, String manufacturer, Integer status, Date createAt) {
+    public Product(int productId, String productName, int quantity, String thumbnail, Float price, String des, String manufacturer, String status, Date createAt) {
         this.productId = productId;
         this.productName = productName;
         this.quantity = quantity;
@@ -39,11 +39,11 @@ public class Product {
     
     
 
-    public Long getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
@@ -55,11 +55,11 @@ public class Product {
         this.productName = productName;
     }
 
-    public Integer getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
@@ -95,11 +95,11 @@ public class Product {
         this.manufacturer = manufacturer;
     }
 
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

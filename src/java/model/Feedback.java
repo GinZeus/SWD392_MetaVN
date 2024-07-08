@@ -11,17 +11,17 @@ import java.util.Date;
  * @author Asus
  */
 public class Feedback {
-    private Long feedbackId;
-    private Long userId;
-    private Long productId;
+    private int feedbackId;
+    private int userId;
+    private int productId;
     private String content;
-    private Integer status;
+    private String status;
     private Date updateAt;
 
     public Feedback() {
     }
 
-    public Feedback(Long feedbackId, Long userId, Long productId, String content, Integer status, Date updateAt) {
+    public Feedback(int feedbackId, int userId, int productId, String content, String status, Date updateAt) {
         this.feedbackId = feedbackId;
         this.userId = userId;
         this.productId = productId;
@@ -30,27 +30,27 @@ public class Feedback {
         this.updateAt = updateAt;
     }
 
-    public Long getFeedbackId() {
+    public int getFeedbackId() {
         return feedbackId;
     }
 
-    public void setFeedbackId(Long feedbackId) {
+    public void setFeedbackId(int feedbackId) {
         this.feedbackId = feedbackId;
     }
 
-    public Long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
-    public Long getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
@@ -62,11 +62,11 @@ public class Feedback {
         this.content = content;
     }
 
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

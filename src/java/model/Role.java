@@ -9,22 +9,22 @@ package model;
  * @author Asus
  */
 public class Role {
-    private Long roleId;
+    private int roleId;
     private String roleName;
 
     public Role() {
     }
 
-    public Role(Long roleId, String roleName) {
+    public Role(int roleId, String roleName) {
         this.roleId = roleId;
         this.roleName = roleName;
     }
 
-    public Long getRoleId() {
+    public int getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(Long roleId) {
+    public void setRoleId(int roleId) {
         this.roleId = roleId;
     }
 
