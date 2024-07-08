@@ -11,23 +11,38 @@ import java.util.Date;
  * @author datng
  */
 public class User {
-    private long userId;
+    private int userId;
     private String username;
     private String password;
     private String email;
     private String fullname;
     private String address;
     private String phoneNumber;
-    private int status;
+    private String status;
     private int roleId;
     private Date createdAt;
 
-    // Getters and Setters
-    public long getUserId() {
+    public User() {
+    }
+
+    public User(int userId, String username, String password, String email, String fullname, String address, String phoneNumber, String status, int roleId, Date createdAt) {
+        this.userId = userId;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.fullname = fullname;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.status = status;
+        this.roleId = roleId;
+        this.createdAt = createdAt;
+    }
+
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -79,11 +94,11 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -102,4 +117,7 @@ public class User {
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
+    
+    
+    
 }
