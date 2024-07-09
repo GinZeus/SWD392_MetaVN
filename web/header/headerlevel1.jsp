@@ -35,7 +35,7 @@
                                                 <ul>
                                                     <li><a href="manageproduct" class="btn btn-small btn-solid-border" style="width: 100%">Product Manage</a></li> 
                                                     <li><a href="manageaccount" class="btn btn-small btn-solid-border" style="width: 100%">User Manage</a></li> 
-<!--                                                    <li><a href="manageorder" class="btn btn-small btn-solid-border" style="width: 100%">Quản lý đơn hàng</a></li> -->
+                                                    <!--                                                    <li><a href="manageorder" class="btn btn-small btn-solid-border" style="width: 100%">Quản lý đơn hàng</a></li> -->
                                                 </ul>
                                             </div>
                                         </div><!-- / .row -->
@@ -50,7 +50,7 @@
                     <div class="col-md-4 col-xs-12 col-sm-4">
                         <!-- Site Logo -->
                         <div class="logo text-center">
-                            <a href="homecontroll">
+                            <a href="index.jsp">
                                 <!-- replace logo here -->
                                 <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink">

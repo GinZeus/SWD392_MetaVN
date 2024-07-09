@@ -56,34 +56,34 @@
             <!-- End Main Menu Section -->
 
             <div class="hero-slider">
-                <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-a.jpg);">
+                <div class="slider-item th-fullpage hero-area" style="background-image: url(https://www.merchantcapital.co.za/hubfs/Electronic%20Online%20Header-01.jpg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8 text-center">
-                                <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">MẮT KÍNH CHÍNH HÃNG</p>
-                                <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Sắc màu cuộc sống rực rỡ hơn <br>với kính mắt chính hãng.</h1>
+                                <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Elevate Your Home </p>
+                                <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">with Our Appliance</h1>
                                 <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="shop">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-b.jpg);">
+                <div class="slider-item th-fullpage hero-area" style="background-image: url(https://www.merchantcapital.co.za/hubfs/Electronic%20Online%20Header-01.jpg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8 text-left">
-                                <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">GỌNG KÍNH ĐẸP, BỀN</p>
-                                <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Nâng tầm phong cách <br>của bạn.</h1>
+                                <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Revolutionize Your Everyday</p>
+                                <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5"> with <br>Our Gadgets</h1>
                                 <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="category?cid=2">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-c.jpg);">
+                <div class="slider-item th-fullpage hero-area" style="background-image: url(https://www.merchantcapital.co.za/hubfs/Electronic%20Online%20Header-01.jpg);">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8 text-right">
-                                <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">KÍNH RÂM CHẤT LƯỢNG CAO</p>
-                                <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Bảo vệ mắt,<br> nâng tầm phong cách.</h1>
+                                <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Plug Into the Future: </p>
+                                <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Shop Our <br>Cutting-Edge Electronics</h1>
                                 <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="category?cid=1">Shop Now</a>
                             </div>
                         </div>
@@ -96,38 +96,38 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="title text-center">
-                                <h2>Loại sản phẩm</h2>
+                                <h2>Categories</h2>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="category-box">
-                                <a href="category?cid=1">
-                                    <img src="images/shop/category/category-a.jpg" alt="" />
+                                <a href="#">
+                                    <img src="https://www.merchantcapital.co.za/hubfs/Electronic%20Online%20Header-01.jpg" alt="" style="filter: blur(5px);" />
                                     <div class="content">
-                                        <h3>Kính râm</h3>
-                                        <p style="color: white">Bảo vệ đôi mắt, thể hiện phong cách</p>
+                                        <h3 style="color: white">TVs & Home Theater</h3>
+                                        <p style="color: white">Various models of TVs and home theater systems including LED, OLED, and smart TVs</p>
                                     </div>
-                                </a>	
+                                </a>
                             </div>
                             <div class="category-box">
-                                <a href="category?cid=2">
-                                    <img src="images/shop/category/category-2.jpg" alt="" />
+                                <a href="#">
+                                    <img src="https://www.merchantcapital.co.za/hubfs/Electronic%20Online%20Header-01.jpg" alt="" style="filter: blur(5px);" />
                                     <div class="content">
-                                        <h3>Smart Casuals</h3>
-                                        <p>Get Wide Range Selection</p>
+                                        <h3 style="color: white">Refrigerators</h3>
+                                        <p style="color: white">A variety of refrigerators including single door, double door, and smart refrigerators</p>
                                     </div>
-                                </a>	
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="category-box category-box-2">
-                                <a href="category?cid=2">
-                                    <img src="images/shop/category/category-b.jpg" alt="" />
+                                <a href="#">
+                                    <img src="https://www.merchantcapital.co.za/hubfs/Electronic%20Online%20Header-01.jpg" alt="" style="filter: blur(5px);" />
                                     <div class="content">
-                                        <h3>Gọng kính</h3>
-                                        <p>Bền, đẹp, phong cách</p>
+                                        <h3 style="color: white">Washing Machines</h3>
+                                        <p style="color: white">Washing machines of different capacities and technologies including front load and top load</p>
                                     </div>
-                                </a>	
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -142,80 +142,80 @@
                         </div>
                     </div>
                     <div class="row">
-                    <c:forEach items="${listP}" var="o">
-                        <div class="col-md-4">
-                            <div class="product-item">
-                                <div class="product-thumb">
-                                    <span class="bage">Sale</span>
-                                    <img class="img-responsive" src="${o.imageurl}" alt="product-img" />
-                                    <div class="preview-meta">
-                                        <ul>
-                                            <li>
-                                                <a href="detail?pid=${o.id}">
-                                                    <i class="tf-ion-ios-search-strong"></i>
-                                                </a>
-                                                    
-                                                
-                                            </li>
-                                            <li>
-                                                <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="buy?pid=${o.id}&num=1"><i class="tf-ion-android-cart"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product-content">
-                                    <h4><a href="detail?pid=${o.id}">${o.name}</a></h4>
-                                    <p class="price">$${o.price}</p>
-                                </div>
-                            </div>
+        <c:forEach items="${listP}" var="o">
+            <div class="col-md-4">
+                <div class="product-item">
+                    <div class="product-thumb">
+                        <span class="bage">Sale</span>
+                        <img class="img-responsive" src="${o.imageurl}" alt="product-img" />
+                        <div class="preview-meta">
+                            <ul>
+                                <li>
+                                    <a href="detail?pid=${o.id}">
+                                        <i class="tf-ion-ios-search-strong"></i>
+                                    </a>
+                                        
+                                    
+                                </li>
+                                <li>
+                                    <a href="#!" ><i class="tf-ion-ios-heart"></i></a>
+                                </li>
+                                <li>
+                                    <a href="buy?pid=${o.id}&num=1"><i class="tf-ion-android-cart"></i></a>
+                                </li>
+                            </ul>
                         </div>
-                    </c:forEach>
-
-
-                    
-                    <!-- Modal -->
-<!--                    <div class="modal product-modal fade" id="product-modal">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <i class="tf-ion-close"></i>
-                        </button>
-                        <div class="modal-dialog " role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-md-8 col-sm-6 col-xs-12">
-                                            <div class="modal-image">
-                                                <img class="img-responsive" src="${o.imgageurl}" alt="product-img" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4 col-sm-6 col-xs-12">
-                                            <div class="product-short-details">
-                                                <h2 class="product-title">${o.name}</h2>
-                                                <p class="product-price">$${o.price}</p>
-                                                <p class="product-short-description">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
-                                                </p>
-                                                <a href="cart.html" class="btn btn-main">Add To Cart</a>
-                                                <a href="product-single.html" class="btn btn-transparent">View Product Details</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                   <!-- /.modal -->
-                    
+                    </div>
+                    <div class="product-content">
+                        <h4><a href="detail?pid=${o.id}">${o.name}</a></h4>
+                        <p class="price">$${o.price}</p>
+                    </div>
                 </div>
             </div>
-        </section>-->
+        </c:forEach>
 
 
-        <!--
-        Start Call To Action
-        ==================================== -->
+        
+        <!-- Modal -->
+        <!--                    <div class="modal product-modal fade" id="product-modal">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <i class="tf-ion-close"></i>
+                                </button>
+                                <div class="modal-dialog " role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-md-8 col-sm-6 col-xs-12">
+                                                    <div class="modal-image">
+                                                        <img class="img-responsive" src="${o.imgageurl}" alt="product-img" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-6 col-xs-12">
+                                                    <div class="product-short-details">
+                                                        <h2 class="product-title">${o.name}</h2>
+                                                        <p class="product-price">$${o.price}</p>
+                                                        <p class="product-short-description">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iusto nihil cum. Illo laborum numquam rem aut officia dicta cumque.
+                                                        </p>
+                                                        <a href="cart.html" class="btn btn-main">Add To Cart</a>
+                                                        <a href="product-single.html" class="btn btn-transparent">View Product Details</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+        <!-- /.modal -->
+
+    </div>
+</div>
+</section>-->
+
+
+<!--
+Start Call To Action
+==================================== -->
 <!--        <section class="call-to-action bg-gray section">
             <div class="container">
                 <div class="row">
@@ -254,40 +254,40 @@
         </section>-->
 
 
-        <footer>
-            <jsp:include page="footer/footerlevel1.jsp"></jsp:include>
-        </footer>
+<footer>
+    <jsp:include page="footer/footerlevel1.jsp"></jsp:include>
+</footer>
 
-        <!-- 
-        Essential Scripts
-        =====================================-->
+<!-- 
+Essential Scripts
+=====================================-->
 
-        <!-- Main jQuery -->
-        <script src="plugins/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.1 -->
-        <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-        <!-- Bootstrap Touchpin -->
-        <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
-        <!-- Instagram Feed Js -->
-        <script src="plugins/instafeed/instafeed.min.js"></script>
-        <!-- Video Lightbox Plugin -->
-        <script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
-        <!-- Count Down Js -->
-        <script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+<!-- Main jQuery -->
+<script src="plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.1 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Touchpin -->
+<script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Instagram Feed Js -->
+<script src="plugins/instafeed/instafeed.min.js"></script>
+<!-- Video Lightbox Plugin -->
+<script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+<!-- Count Down Js -->
+<script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
 
-        <!-- slick Carousel -->
-        <script src="plugins/slick/slick.min.js"></script>
-        <script src="plugins/slick/slick-animation.min.js"></script>
+<!-- slick Carousel -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
 
-        <!-- Google Mapl -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
-        <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+<!-- Google Mapl -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script type="text/javascript" src="plugins/google-map/gmap.js"></script>
 
-        <!-- Main Js File -->
-        <script src="js/script.js"></script>
+<!-- Main Js File -->
+<script src="js/script.js"></script>
 
 
 
-    </body>
+</body>
 </html>
 

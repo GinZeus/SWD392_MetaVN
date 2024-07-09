@@ -34,11 +34,13 @@
 
                             <!-- Home -->
                             <li class="dropdown ">
-                                <a href="homecontroll">Home</a>
+                                <a href="index.jsp">Home</a>
+                            </li><!-- / Home -->
+                            <li class="dropdown ">
+                                <a href="ShopController">Shop</a>
                             </li><!-- / Home -->
 
-
-                            <!-- Product -->
+<!--                             Product 
                             <li class="dropdown dropdown-slide">
                                 <a href="shop" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
                                    role="button" aria-haspopup="true" aria-expanded="false">Category<span
@@ -46,7 +48,7 @@
                                 <div class="dropdown-menu">
                                     <div class="row">
 
-                                        <!-- Basic -->
+                                         Basic 
                                         <div class="col-lg-12 col-md-12 mb-sm-3">
                                             <ul>
                                                 <a href="shop"><li class="dropdown-header">Shop</li></a>
@@ -57,9 +59,9 @@
 
                                             </ul>
                                         </div>
-                                    </div><!-- / .row -->
-                                </div><!-- / .dropdown-menu -->
-                            </li><!-- / Product -->
+                                    </div> / .row 
+                                </div> / .dropdown-menu 
+                            </li> / Product -->
                             
 <!--                              Brand 
                             <li class="dropdown dropdown-slide">

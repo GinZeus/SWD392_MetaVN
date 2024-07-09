@@ -7,9 +7,17 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>controller.user.LoginController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DetailController</servlet-name>
+        <servlet-class>controller.product.DetailController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailController</servlet-name>
+        <url-pattern>/DetailController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
