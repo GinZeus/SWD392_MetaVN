@@ -47,11 +47,41 @@ public class UserDAO extends BaseDAO {
         }
         return null;
     }
+    
+    public User getUserInfo(String usrID) {
+        try {
+            String sql = "select * from [User] where [user_id] = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            statement.setString(1, usrID);
+
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                User usr = new User(
+                    rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    rs.getString(5),
+                    rs.getString(6),
+                    rs.getString(7),
+                    rs.getString(8),
+                    rs.getInt(9),
+                    rs.getDate(10)
+                );
+                return usr;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
     public static void main(String[] args) {
         String username = "test";
         String password ="1234";
         UserDAO dao = new UserDAO();
-        User usr = dao.getAccountToAccess(username, password);
+        User usr = dao.getUserInfo("1");
         System.out.println(usr);
     }
 }
