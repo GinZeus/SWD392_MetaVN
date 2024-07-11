@@ -2,24 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package controller.user;
+package controller.product;
 
-import dal.UserDAO;
+import dal.CategoryDAO;
+import dal.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import model.User;
+import java.util.ArrayList;
+import java.util.List;
+import model.Category;
+import model.Product;
 
 /**
  *
- * @author datng
+ * @author Asus
  */
-public class LoginController extends HttpServlet {
+@WebServlet(name = "Manage_ListProductController", urlPatterns = {"/manageProduct"})
+public class Manage_ListProductController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,19 +36,14 @@ public class LoginController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        ProductDAO dao = new ProductDAO();
+        List<Product> productList = dao.getProductList();
+        request.setAttribute("productList", productList);
+        CategoryDAO cateDAO = new CategoryDAO();
+        ArrayList<Category> cateList = cateDAO.CategoryList();
+        request.setAttribute("cateList", cateList);
+        request.getRequestDispatcher("Manage_Product.jsp").forward(request, response);
+        //response.sendRedirect("Manage_Product.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -73,36 +72,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("user");
-        String password = request.getParameter("pass");
-        String remember = request.getParameter("remember");
-        UserDAO dao = new UserDAO();
-        User a = dao.getAccountToAccess(username, password);
-        if (a == null) {
-            request.setAttribute("mess", "Cảnh báo! Username hoặc Password sai. Xin vui lòng nhập lại.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        } else {
-            HttpSession session = request.getSession();
-            session.setAttribute("account", a);
-
-            //Cookie
-            Cookie u = new Cookie("userC", username);
-            Cookie p = new Cookie("passC", password);
-            session.setAttribute("username", username);
-            if (remember != null) {
-                u.setMaxAge(60 * 60 * 24);
-                p.setMaxAge(60 * 60 * 24);
-            } else {
-                u.setMaxAge(0);
-                p.setMaxAge(0);
-            }
-            response.addCookie(u); //luu u va p len tren trinh duyet
-            response.addCookie(p);
-            
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-
-        }
+        processRequest(request, response);
     }
 
     /**

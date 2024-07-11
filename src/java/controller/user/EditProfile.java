@@ -8,18 +8,17 @@ import dal.UserDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import model.User;
 
 /**
  *
- * @author datng
+ * @author Asus
  */
-public class LoginController extends HttpServlet {
+@WebServlet(name = "EditProfile", urlPatterns = {"/editProfile"})
+public class EditProfile extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +37,10 @@ public class LoginController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");
+            out.println("<title>Servlet EditProfile</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet EditProfile at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -73,36 +72,13 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("user");
-        String password = request.getParameter("pass");
-        String remember = request.getParameter("remember");
+        String username = request.getParameter("username");
+        String fullName = request.getParameter("fullName");
+        String address = request.getParameter("address");
+        String phoneNumber = request.getParameter("phoneNumber");
         UserDAO dao = new UserDAO();
-        User a = dao.getAccountToAccess(username, password);
-        if (a == null) {
-            request.setAttribute("mess", "Cảnh báo! Username hoặc Password sai. Xin vui lòng nhập lại.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        } else {
-            HttpSession session = request.getSession();
-            session.setAttribute("account", a);
-
-            //Cookie
-            Cookie u = new Cookie("userC", username);
-            Cookie p = new Cookie("passC", password);
-            session.setAttribute("username", username);
-            if (remember != null) {
-                u.setMaxAge(60 * 60 * 24);
-                p.setMaxAge(60 * 60 * 24);
-            } else {
-                u.setMaxAge(0);
-                p.setMaxAge(0);
-            }
-            response.addCookie(u); //luu u va p len tren trinh duyet
-            response.addCookie(p);
-            
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-
-        }
+        dao.EditProfile(fullName, address, phoneNumber, username);
+        request.getRequestDispatcher("profile").forward(request, response);
     }
 
     /**

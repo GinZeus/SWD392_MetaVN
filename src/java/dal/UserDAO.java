@@ -77,11 +77,63 @@ public class UserDAO extends BaseDAO {
         return null;
     }
     
+    public User getUserByUsername(String username) {
+        try {
+            String sql = "select * from [User] where [username] = ?";
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            statement.setString(1, username);
+
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                User usr = new User(
+                    rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    rs.getString(5),
+                    rs.getString(6),
+                    rs.getString(7),
+                    rs.getString(8),
+                    rs.getInt(9),
+                    rs.getDate(10)
+                );
+                return usr;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    public void EditProfile(String fullname, String address , String phone, String username) {
+        PreparedStatement stm;
+        ResultSet rs;
+        String sql = "UPDATE [dbo].[User]\n"
+                + "   SET [fullname] = ?\n"
+                + "      ,[address] = ?\n"
+                + "      ,[phone_number] = ?\n"
+                + "     \n"
+                + " WHERE [username]= ? ";
+        try {
+            stm = connection.prepareStatement(sql);
+            stm.setString(1, fullname);
+            stm.setString(2, address);
+            stm.setString(3, phone);
+            stm.setString(4, username);
+            stm.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+    }
     public static void main(String[] args) {
-        String username = "test";
-        String password ="1234";
+        String username = "john_doe";
+        String password ="pass123";
         UserDAO dao = new UserDAO();
-        User usr = dao.getUserInfo("1");
+        User usr = dao.getUserByUsername("john_doe");
         System.out.println(usr);
+        
     }
 }

@@ -2,24 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
-package controller.user;
+package controller.category;
 
+import dal.CategoryDAO;
 import dal.UserDAO;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.Cookie;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import model.User;
 
 /**
  *
- * @author datng
+ * @author Asus
  */
-public class LoginController extends HttpServlet {
+@WebServlet(name = "EditCategoryController", urlPatterns = {"/EditCateController"})
+public class EditCategoryController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +40,10 @@ public class LoginController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginController</title>");
+            out.println("<title>Servlet EditCategoryController</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet EditCategoryController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -59,7 +61,7 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
     }
 
     /**
@@ -73,35 +75,22 @@ public class LoginController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String username = request.getParameter("user");
-        String password = request.getParameter("pass");
-        String remember = request.getParameter("remember");
-        UserDAO dao = new UserDAO();
-        User a = dao.getAccountToAccess(username, password);
-        if (a == null) {
-            request.setAttribute("mess", "Cảnh báo! Username hoặc Password sai. Xin vui lòng nhập lại.");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        String username = (String) session.getAttribute("username");
+        UserDAO userDAO = new UserDAO();
+        User user = userDAO.getUserByUsername(username);
+        if (user == null) {
+            request.getRequestDispatcher("Login.jsp").forward(request, response);
         } else {
-            HttpSession session = request.getSession();
-            session.setAttribute("account", a);
-
-            //Cookie
-            Cookie u = new Cookie("userC", username);
-            Cookie p = new Cookie("passC", password);
-            session.setAttribute("username", username);
-            if (remember != null) {
-                u.setMaxAge(60 * 60 * 24);
-                p.setMaxAge(60 * 60 * 24);
+            if (user.getRoleId() != 2) {
+                response.sendRedirect("Error.jsp");
             } else {
-                u.setMaxAge(0);
-                p.setMaxAge(0);
+                CategoryDAO cateDAO = new CategoryDAO();
+                String cate_name = request.getParameter("cate_name");
+                String cate_id = request.getParameter("cate_id");
+                cateDAO.editCateInfo(cate_name, cate_id);
+                response.sendRedirect("ManageCateController");
             }
-            response.addCookie(u); //luu u va p len tren trinh duyet
-            response.addCookie(p);
-            
-            request.getRequestDispatcher("index.jsp").forward(request, response);
-
         }
     }
 
