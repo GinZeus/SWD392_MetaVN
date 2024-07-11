@@ -20,7 +20,7 @@ public abstract class BaseDAO {
     {
         try {
             String user = "sa";
-            String pass = "12345";
+            String pass = "12345678";
             String url = "jdbc:sqlserver://localhost:1433;databaseName=MetaVN";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
